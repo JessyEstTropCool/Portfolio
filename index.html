@@ -14,7 +14,7 @@
     <body>
         <section class="hero">
             <nav>
-                <img class="logo" src="src/images/CoolIcon.png" alt="Jessy Adam's logo">
+                <a href="#"><img class="logo" src="src/images/CoolIcon.png" alt="Jessy Adam's logo"></a>
                 <ul id="nav-list">
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -52,70 +52,137 @@
         <section class="sub-section" id="about-me">
             <div class="information">
                 <h2>About me</h2>
-                <p>Hello, My name is Jessy Adam. I am a Software Developper who made Pierre qui Roule.</p>
+                <p>
+                    I'm a 20 year old student in 3rd year of Bachelor in Business Computing at the HELB Ilya Prigogine, located in Brussels. 
+                    I've always had a passion for making things and Computer Science is no exception. 
+                    While I've started it because of video games, the wealth of technologies and the things done with them has kept me interested and curious.
+                    On my learning journey, I've mainly been coding in C# and Java.
+                </p>
             </div>
             <div class="headshot-container">
-                <img class="headshot" src="src/images/headshot.jpg" alt="Jessy Adam headshot">
+                <span>
+                    <img class="headshot" src="src/images/headshot.jpg" alt="Jessy Adam headshot">
+                    <p>Hi, I'm Jessy Adam</p>
+                </span>
+                <a class="button" href="src/files/Jessy CV V2 FR.pdf" download="Jessy Adam CV">
+                    Download CV <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="24" height="24" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
+                </a>
             </div>
         </section>
+        <section class="sub-section">Education goes here</section>
+        <section class="sub-section">Skills  goes here</section>
         <section class="sub-section-alt" id="projects">
             <h2>Projects</h2>
             <div class="project-container">
                 <div class="project-card">
-                    <img class="project-image" src="src/images/ThomasQuiTourne.jpg" alt="Thomas Qui Tourne image">
-                    <h3>Thomas Qui Tourne</h3>
-                    <p class="subtext">A platforming game made in C# using the Unity engine, some of the models including the protagonist were also made by me</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/ThomasQuiTourne.jpg" alt="Thomas Qui Tourne image">
+                        <h3>Thomas Qui Tourne</h3>
+                        <p class="subtext">A platforming game made in C# using the Unity engine, some of the models including the protagonist were also made by me</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/FortuneRoue.png" alt="Fortune à la Roue image">
-                    <h3>Fortune à la Roue</h3>
-                    <p class="subtext">A PHP website which let's you play a game very much inspired by the show "Wheel of Fortune" with Pure HTML, JS and CSS.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="http://jadam.alwaysdata.net/FortuneRoue/Le%20Jeu/RoueFortune.php">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/FortuneRoue.png" alt="Fortune à la Roue image">
+                        <h3>Fortune à la Roue</h3>
+                        <p class="subtext">A PHP website which let's you play a game very much inspired by the show "Wheel of Fortune" with Pure HTML, JS and CSS.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                            &nbsp;-&nbsp;
+                            <a class="project-link" href="http://jadam.alwaysdata.net/FortuneRoue/Le%20Jeu/RoueFortune.php">View live</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/Frogger.png" alt="Frogger image">
-                    <h3>Frogger</h3>
-                    <p class="subtext">A game inspired by the arcade classic "Frogger", it was made in Java using the Swing library and is based on the "Snake" game made by <a class="project-link" href="https://github.com/janbodnar/Java-Snake-Game">Jan Bodnar</a>.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/Frogger.png" alt="Frogger image">
+                        <h3>Frogger</h3>
+                        <p class="subtext project-desc">A game inspired by the arcade classic "Frogger", it was made in Java using the Swing library and is based on the "Snake" game made by <a class="project-link" href="https://github.com/janbodnar/Java-Snake-Game">Jan Bodnar</a>.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/HELBImmo.png" alt="HELBImmo image">
-                    <h3>HELBImmo</h3>
-                    <p class="subtext">A real estate website made in Python with the Django framework.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/HELBImmo.png" alt="HELBImmo image">
+                        <h3>HELBImmo</h3>
+                        <p class="subtext">A real estate website made in Python with the Django framework. This was heavily inspired by tutorials by <a class="project-link" href="https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p">Corey Schafer</a>.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                            &nbsp;-&nbsp;
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View live</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/TileVille.jpg" alt="TileVille image">
-                    <h3>TileVille</h3>
-                    <p class="subtext">A city management game for Android phones made in Java with Android Studio, which implements a weather API.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/TileVille.jpg" alt="TileVille image">
+                        <h3>TileVille</h3>
+                        <p class="subtext">A city management game for Android phones made in Java with Android Studio, which implements a weather API.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/LogView.png" alt="Log&View image">
-                    <h3>Log&View</h3>
-                    <p class="subtext">A dashboard website for the monitoring of various measurements (CO2, Temperature, etc.) in various buildings. Made in Python with the Django framework.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/LogView.png" alt="Log&View image">
+                        <h3>Log&View</h3>
+                        <p class="subtext">A dashboard website for the monitoring of various measurements (CO2, Temperature, etc.) in various buildings. Made in Python with the Django framework.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                            &nbsp;-&nbsp;
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View live</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/MeteoStation.png" alt="Log&View Desktop image">
-                    <h3>Meteo Station (C# interface for Log&View)</h3>
-                    <p class="subtext">A C# / .NET interface which takes the measurements using serial ports and sends them to the Log&View website.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/MeteoStation.png" alt="Log&View Desktop image">
+                        <h3>Meteo Station<br>(C# interface for Log&View)</h3>
+                        <p class="subtext">A C# / .NET interface which takes the measurements using serial ports and sends them to the Log&View website.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="src/images/HELBPark.png" alt="HELBPark image">
-                    <h3>HELBPark</h3>
-                    <p class="subtext">A parking management application made in Java with the JavaFX library, created with the implementation of design patterns in mind.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://www.github.com/JessyEstTropCool">View here</a></p>
+                    <div>
+                        <img class="project-image" src="src/images/HELBPark.png" alt="HELBPark image">
+                        <h3>HELBPark</h3>
+                        <p class="subtext">A parking management application made in Java with the JavaFX library, created with the implementation of design patterns in mind.</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://www.github.com/JessyEstTropCool">View on GitHub</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
