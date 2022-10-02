@@ -311,4 +311,9 @@ hr
         justify-content: space-between;
         width: 100%;
     }
+
+    .hero-area
+    {
+        background-position: 150% 100%;
+    }
 }
