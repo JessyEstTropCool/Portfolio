@@ -166,6 +166,32 @@ p
     padding: 80px;
 }
 
+.information
+{
+    margin-right: 10px;
+}
+
+.stat-container
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.stat
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.stat h2
+{
+    display: inline;
+    font-size: 40px;
+    margin: 0 10px;
+}
+
 .headshot
 {
     width: 300px;
@@ -177,14 +203,26 @@ p
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.headshot-container .button
+{
+    display: block;
+    margin-bottom: 10px;
 }
 
 .headshot-container span
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+}
+
+.sm-only
+{
+    display: none;
 }
 
 .project-card
@@ -305,9 +343,14 @@ hr
         align-items: center;
     }
 
+    .information
+    {
+        margin-right: 0;
+    }
+
     .headshot-container
     {
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-between;
         width: 100%;
     }
@@ -315,5 +358,19 @@ hr
     .hero-area
     {
         background-position: 150% 100%;
+    }
+}
+
+@media screen and (max-width: 780px)
+{
+    .headshot-container
+    {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sm-only
+    {
+        display: block;
     }
 }
