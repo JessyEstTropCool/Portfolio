@@ -8,6 +8,7 @@
 
     --nav-back:#2b2c38;
     --accent:coral;
+    --accent-secondary:#ef744b;
 
     --btn-active-back:#808080;
     --btn-active-front:#A9A9A9;
@@ -283,18 +284,36 @@ p
 
 .skill
 {
-    max-height: 150px;
-    min-width: 150px;
-    max-width: 150px;
+    display: flex;
+    flex-flow: column nowrap;
     margin: 0 auto;
 }
 
-.lg-skills .skill
+.skill div
+{
+    max-height: 150px;
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.expertise
+{
+    width: 100%;
+}
+
+.expertise .skills
+{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.expertise .skill
 {
     max-height: 300px;
+    min-height: 300px;
     min-width: 300px;
     max-width: 300px;
-    margin: 0 auto;
 }
 
 .skill img
@@ -380,19 +399,28 @@ hr
     to { transform: rotate(0deg); }
 }
 
+@-moz-keyframes spin
+{
+    from { -moz-transform: rotate(-90deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+
 @media only screen and (max-width: 1000px)
 {
     .hamburger
     {
         display:block;
         border: 0;
-        background-color: var(--hero-back);
+        background-color: var(--accent);
         color: white;
         font-size: 30px;
         padding:20px 30px;
         min-width: 50px;
         align-self: flex-end;
     }
+
+    .hamburger:hover { background-color: var(--accent-secondary); }
+    .hamburger:active { background-color: var(--btn-active-back); color: var(--btn-active-front); }
 
     ul
     {
@@ -411,6 +439,11 @@ hr
     li
     {
         padding:0 0 0 35px;
+        display: none;
+    }
+
+    ul.show li
+    {
         display: block;
     }
 
@@ -428,6 +461,7 @@ hr
     li a:hover::marker
     {
         animation: spin 0.2s ease-out forwards;
+        -moz-animation: 0.2s ease-out 0s 1 forwards running spin;
     }
 
     nav
