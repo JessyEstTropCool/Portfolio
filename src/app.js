@@ -7,3 +7,8 @@ function toggleButton()
 }
 
 hamburgerButton.addEventListener('click', toggleButton);
+navList.childNodes.forEach((child, key, parent) => {
+    child.addEventListener('click', () => {
+        navList.classList.remove('show');
+    });
+});

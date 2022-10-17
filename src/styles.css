@@ -260,6 +260,8 @@ p
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 50px;
+    min-width: 0; /* https://stackoverflow.com/q/36247140/3597276 */
+    max-width: 100%;
 }
 
 .gallery
@@ -267,15 +269,16 @@ p
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    min-width: 0; /* https://stackoverflow.com/q/36247140/3597276 */
 }
 
 .skills
 {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
     overflow: auto hidden;
     max-width: 100%;
+    gap: 20px;
 }
 
 .skill
@@ -283,7 +286,15 @@ p
     max-height: 150px;
     min-width: 150px;
     max-width: 150px;
-    margin: 0 10px;
+    margin: 0 auto;
+}
+
+.lg-skills .skill
+{
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .skill img
@@ -363,6 +374,12 @@ hr
     outline: 0;
 }
 
+@keyframes spin
+{
+    from { transform: rotate(-90deg); }
+    to { transform: rotate(0deg); }
+}
+
 @media only screen and (max-width: 1000px)
 {
     .hamburger
@@ -408,6 +425,11 @@ hr
         padding-left: 10px;
     }
 
+    li a:hover::marker
+    {
+        animation: spin 0.2s ease-out forwards;
+    }
+
     nav
     {
         flex-direction: column-reverse;
@@ -417,7 +439,7 @@ hr
     {
         width:60px;
         height:60px;
-        margin:10px;
+        margin:7px;
         position: absolute;
         left:0;
         top:0;
@@ -459,4 +481,25 @@ hr
     {
         display: block;
     }
+
+    .sub-section
+    {
+        padding: 0;
+    }
+
+    .sub-section-alt
+    {
+        padding: 0;
+    }
+
+    .hero-text
+    {
+        margin-left: 10px;
+    }
+
+    footer { padding: inherit 10px; }
+
+    h1 { font-size: 60px; }
+    h2 { font-size: 40px; }
+    p { font-size: 20px; }
 }
