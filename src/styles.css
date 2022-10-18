@@ -393,6 +393,20 @@ hr
     outline: 0;
 }
 
+form
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form *
+{
+    display: block;
+    width: 100%;
+}
+
 @keyframes spin
 {
     from { transform: rotate(-90deg); }
@@ -516,22 +530,16 @@ hr
         display: block;
     }
 
-    .sub-section
+    .sub-section, .sub-section-alt, footer
     {
-        padding: 0;
-    }
-
-    .sub-section-alt
-    {
-        padding: 0;
+        padding: 20px;
+        padding-top: 80px;
     }
 
     .hero-text
     {
         margin-left: 10px;
     }
-
-    footer { padding: inherit 10px; }
 
     h1 { font-size: 60px; }
     h2 { font-size: 40px; }
