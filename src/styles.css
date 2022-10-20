@@ -277,9 +277,16 @@ p
 {
     display: flex;
     margin-top: 20px;
-    overflow: auto hidden;
+    /*overflow: auto hidden;*/
+    overflow: hidden;
     max-width: 100%;
     gap: 20px;
+    touch-action: pan-x;
+}
+
+.skills:active, .skills:hover
+{
+    /*overflow: auto hidden;*/
 }
 
 .skill
@@ -405,6 +412,15 @@ form *
 {
     display: block;
     width: 100%;
+}
+
+input, textarea
+{
+    border-radius: 10px;
+    padding:10px;
+    border:0;
+    font-size:20px;
+    font-weight: 300;
 }
 
 @keyframes spin
