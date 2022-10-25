@@ -24,15 +24,15 @@ for (let index = 0; index < skills.length; index++)
     element.setAttribute("time", "0");
 
     element.addEventListener('mouseenter', () => {
+        console.log('mouseenter');
         element.setAttribute("wait", "true");
     });
-    element.addEventListener('touchstart', () => {
+    element.addEventListener('active', () => {
+        console.log('active');
         element.setAttribute("wait", "true");
     });
     element.addEventListener('mouseleave', () => {
-        element.removeAttribute("wait");
-    });
-    element.addEventListener('touchend', () => {
+        console.log('mouseleave');
         element.removeAttribute("wait");
     });
     
