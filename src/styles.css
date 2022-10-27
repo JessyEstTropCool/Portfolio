@@ -8,18 +8,20 @@
 
     --nav-back:#2b2c38;
     --accent:coral;
+    --accent-transparent:#ef744b80;
     --accent-secondary:#ef744b;
 
     --btn-active-back:#808080;
     --btn-active-front:#A9A9A9;
-    --shadow:#969696;
+    --shadow:#BBBBBB80;
 }
 
 html, body
 {
     margin:0;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+
+    /*scroll-behavior: smooth;*/
 }
 
 section
@@ -37,8 +39,8 @@ section
 
 footer
 {
-    background-color: black;
-    color:white;
+    background-color: var(--hero-back);
+    color:var(--hero-front);
     text-align: center;
     padding: 80px;
 }
@@ -51,6 +53,7 @@ nav
     display:flex;
     justify-content: space-between;
     background-color: #2b2c38;
+    z-index: 99;
 }
 
 ul
@@ -273,20 +276,75 @@ p
     min-width: 0; /* https://stackoverflow.com/q/36247140/3597276 */
 }
 
+.skills-wrapper
+{
+    margin-top: 20px;
+}
+
 .skills
 {
     display: flex;
-    margin-top: 20px;
-    /*overflow: auto hidden;*/
-    overflow: hidden;
+    overflow: auto hidden;
     max-width: 100%;
     gap: 20px;
-    touch-action: pan-x;
+
+    /* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.skills:active, .skills:hover
+/* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+.skills::-webkit-scrollbar { 
+    display: none;  /* Safari, Chrome & Opera */
+}
+
+.skills-shadow
 {
-    overflow: auto hidden;
+    position: relative;
+}
+
+.skills-shadow:hover::before, .skills-shadow:active::before
+{
+    content: "◀";
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;  
+    font-size: 50px;
+    color: var(--accent-transparent);
+}
+
+.skills-shadow:hover::after, .skills-shadow:active::after
+{
+    content: "▶";
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-size: 50px;
+    color: var(--accent-transparent);
+}
+
+.skills-shadow::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--shadow) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.skills-shadow::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, var(--shadow) 100%);
+    pointer-events: none;
 }
 
 .skill
@@ -313,6 +371,12 @@ p
 {
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.expertise .skills::before, .expertise .skills::after
+{
+    background: none;
+    content:none;
 }
 
 .expertise .skill
@@ -405,7 +469,6 @@ form
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
 }
 
@@ -418,6 +481,12 @@ input, textarea
     border:0;
     font-size:20px;
     font-weight: 300;
+    margin-bottom: 10px;
+}
+
+label
+{
+    align-self: flex-start;
 }
 
 @keyframes spin
