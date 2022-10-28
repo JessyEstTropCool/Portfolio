@@ -1,6 +1,7 @@
 const hamburgerButton = document.getElementById('hamburger');
 const navList = document.getElementById('nav-list');
 const skills = document.getElementsByClassName('skills');
+const experiences = document.getElementsByClassName('experience-container');
 
 const autoScrollDelay = 1000;
 const scrollRate = 0.1;
@@ -22,6 +23,16 @@ navList.childNodes.forEach((child, key, parent) => {
 document.getElementById("form-submit").onclick = function() {
     document.getElementById("message-form").submit();
 }
+
+for (let index = 0; index < experiences.length; index++)
+{
+    const elem = experiences[index];
+
+    elem.getElementsByClassName('dropdown-button')[0].onclick = function() {
+        elem.getElementsByClassName('experiences')[0].classList.toggle('show');
+        this.classList.toggle('dropped');
+    }
+}    
 
 for (let index = 0; index < skills.length; index++) 
 {

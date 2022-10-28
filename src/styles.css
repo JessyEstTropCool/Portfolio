@@ -13,7 +13,9 @@
 
     --btn-active-back:#808080;
     --btn-active-front:#A9A9A9;
+
     --shadow:#BBBBBB80;
+    --heavy-shadow:rgb(150, 150, 150);
 }
 
 html, body
@@ -393,6 +395,43 @@ p
     object-fit: contain;
 }
 
+.experience-container
+{
+    width: 100%;
+    box-shadow: 0 5px 20px var(--heavy-shadow);
+    margin-bottom: 40px;
+}
+
+.dropdown-button
+{
+    display:flex;
+    justify-content: space-between;
+    border: 0;
+    background-color: var(--accent);
+    color: white;
+    font-size: 20px;
+    padding:10px 15px;
+    min-width: 100%;
+}
+
+.dropdown-button::after { content: "▼"; }
+.dropdown-button.dropped::after { content: "▲"; }
+
+.dropdown-button:hover { background-color: var(--accent-secondary); }
+.dropdown-button:active { background-color: var(--btn-active-back); color: var(--btn-active-front); }
+.dropdown-button:focus { outline: 0; }
+
+.experiences
+{
+    display: none;
+}
+
+.experiences.show
+{
+    display: block;
+    padding: 20px 0;
+}
+
 .project-card
 {
     width: 280px;
@@ -514,6 +553,7 @@ label
         font-size: 30px;
         padding:20px 30px;
         min-width: 50px;
+        min-height: 1em;
         align-self: flex-end;
     }
 
@@ -598,6 +638,17 @@ label
     .hero-area
     {
         background-position: 150% 100%;
+    }
+
+    .sub-section, .sub-section-alt, footer
+    {
+        padding: 40px;
+        padding-top: 80px;
+    }
+
+    .hero-text
+    {
+        margin-left: 20px;
     }
 }
 
