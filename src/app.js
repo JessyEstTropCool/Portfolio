@@ -19,6 +19,10 @@ navList.childNodes.forEach((child, key, parent) => {
     });
 });
 
+document.getElementById("form-submit").onclick = function() {
+    document.getElementById("message-form").submit();
+}
+
 for (let index = 0; index < skills.length; index++) 
 {
     const element = skills[index];

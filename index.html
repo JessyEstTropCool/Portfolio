@@ -239,7 +239,7 @@
             <div class="project-container">
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/ThomasQuiTourne.jpg" alt="Thomas Qui Tourne image">
+                        <img class="project-image" src="src/images/proj/ThomasQuiTourne.jpg" alt="Thomas Qui Tourne image">
                         <h3>Thomas Qui Tourne</h3>
                         <p class="subtext project-desc">A platforming game made in C# using the Unity engine, some of the models including the protagonist were also made by me</p>
                     </div>
@@ -252,7 +252,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/FortuneRoue.png" alt="Fortune à la Roue image">
+                        <img class="project-image" src="src/images/proj/FortuneRoue.png" alt="Fortune à la Roue image">
                         <h3>Fortune à la Roue</h3>
                         <p class="subtext project-desc">A PHP website which let's you play a game very much inspired by the show "Wheel of Fortune" with Pure HTML, JS and CSS.</p>
                     </div>
@@ -267,7 +267,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/Frogger.png" alt="Frogger image">
+                        <img class="project-image" src="src/images/proj/Frogger.png" alt="Frogger image">
                         <h3>Frogger</h3>
                         <p class="subtext project-desc">A game inspired by the arcade classic "Frogger", it was made in Java using the Swing library and is based on the "Snake" game made by <a class="project-link" href="https://github.com/janbodnar/Java-Snake-Game">Jan Bodnar</a>.</p>
                     </div>
@@ -280,7 +280,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/HELBImmo.png" alt="HELBImmo image">
+                        <img class="project-image" src="src/images/proj/HELBImmo.png" alt="HELBImmo image">
                         <h3>HELBImmo</h3>
                         <p class="subtext project-desc">A real estate website made in Python with the Django framework. This was heavily inspired by tutorials by <a class="project-link" href="https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p">Corey Schafer</a>.</p>
                     </div>
@@ -295,7 +295,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/TileVille.jpg" alt="TileVille image">
+                        <img class="project-image" src="src/images/proj/TileVille.jpg" alt="TileVille image">
                         <h3>TileVille</h3>
                         <p class="subtext project-desc">A city management game for Android phones made in Java with Android Studio, which implements a weather API.</p>
                     </div>
@@ -308,7 +308,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/LogView.png" alt="Log&View image">
+                        <img class="project-image" src="src/images/proj/LogView.png" alt="Log&View image">
                         <h3>Log&View</h3>
                         <p class="subtext project-desc">A dashboard website for the monitoring of various measurements (CO2, Temperature, etc.) in various buildings. Made in Python with the Django framework.</p>
                     </div>
@@ -323,7 +323,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/MeteoStation.png" alt="Log&View Desktop image">
+                        <img class="project-image" src="src/images/proj/MeteoStation.png" alt="Log&View Desktop image">
                         <h3>Meteo Station<br>(C# interface for Log&View)</h3>
                         <p class="subtext project-desc">A C# / .NET interface which takes the measurements using serial ports and sends them to the Log&View website.</p>
                     </div>
@@ -336,7 +336,7 @@
                 </div>
                 <div class="project-card">
                     <div>
-                        <img class="project-image" src="src/images/HELBPark.png" alt="HELBPark image">
+                        <img class="project-image" src="src/images/proj/HELBPark.png" alt="HELBPark image">
                         <h3>HELBPark</h3>
                         <p class="subtext project-desc">A parking management application made in Java with the JavaFX library, created with the implementation of design patterns in mind.</p>
                     </div>
@@ -352,14 +352,14 @@
         <footer id="contact-me">
             <h2>Contact me</h2>
             <p>jadam.jessyadam@gmail.com</p>
-            <form>
+            <form id="message-form" method="get" action="#">
                 <label for="name">Name</label>
-                <input type="text" name="name" value="The form doesn't work right now, sorry" id="contact_name">
+                <input type="text" name="name" placeholder="The form doesn't work right now" id="contact_name">
                 <label for="email">Email address</label>
-                <input type="text" name="email" id="contact_email">
+                <input type="text" name="email" placeholder="sorry" id="contact_email">
                 <label for="message">Message</label>
-                <textarea name="message" id="contact_message"></textarea>
-                <div class="button">Submit</div>
+                <textarea name="message" placeholder="I'll try to fix it soon" id="contact_message"></textarea>
+                <div class="button"><a href="#" id="form-submit">Submit</a></div>
             </form>
         </footer>
 

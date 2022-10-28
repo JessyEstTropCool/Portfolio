@@ -21,7 +21,7 @@ html, body
     margin:0;
     font-family: 'Poppins', sans-serif;
 
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
 }
 
 section
@@ -153,6 +153,7 @@ p
     padding: 5px;
     border-radius: 10px;
     margin-top: 5px;
+    user-select: contain;
 }
 
 .button:hover, .sm-button:hover
@@ -303,48 +304,46 @@ p
     position: relative;
 }
 
-.skills-shadow:hover::before, .skills-shadow:active::before
+.skills-shadow::before, .skills-shadow::after
 {
-    content: "◀";
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 5px;  
-    font-size: 50px;
-    color: var(--accent-transparent);
-}
-
-.skills-shadow:hover::after, .skills-shadow:active::after
-{
-    content: "▶";
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 5px;
-    font-size: 50px;
-    color: var(--accent-transparent);
+    content: "";
+    position: absolute;
+    width: 75px;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 
 .skills-shadow::before {
-    content: "";
-    position: absolute;
-    width: 75px;
-    left: 0;
-    top: 0;
-    bottom: 0;
     background: linear-gradient(90deg, var(--shadow) 0%, transparent 100%);
-    pointer-events: none;
+    left: 0;
 }
 
 .skills-shadow::after {
-    content: "";
-    position: absolute;
-    width: 75px;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background: linear-gradient(90deg, transparent 0%, var(--shadow) 100%);
-    pointer-events: none;
+    right: 0;
+}
+
+.skills-shadow:hover::before, .skills-shadow:hover::after
+{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: var(--accent-transparent);
+}
+
+.skills-shadow:hover::before
+{
+    content: "◀";
+    padding-left: 5px;  
+    justify-content: flex-start; 
+}
+
+.skills-shadow:hover::after
+{
+    content: "▶";
+    padding-right: 5px;
+    justify-content: flex-end; 
 }
 
 .skill
@@ -474,6 +473,8 @@ form
 
 input, textarea
 {
+    font-family: Arial, Helvetica, sans-serif;
+
     display: block;
     width: 100%;
     border-radius: 10px;
@@ -482,6 +483,7 @@ input, textarea
     font-size:20px;
     font-weight: 300;
     margin-bottom: 10px;
+    resize: vertical;
 }
 
 label
