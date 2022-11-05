@@ -65,6 +65,7 @@ ul
     margin:10px;
     padding:0;
     list-style: none;
+    transition: height linear 0.3s;
 }
 
 li
@@ -423,13 +424,19 @@ p
 
 .experiences
 {
-    display: none;
+    /*display: none;*/
+    height: 0;
+    transition: height linear 0.3s;
+    padding: 0;
+    opacity: 0;
 }
 
 .experiences.show
 {
-    display: block;
+    /*display: block;*/
+    height:auto;
     padding: 20px 0;
+    opacity: 1;
 }
 
 .project-card
@@ -563,21 +570,25 @@ label
     ul
     {
         list-style: none;
-        display: none;
+        display: block;
+        overflow: hidden;
+        height: 0;
+        /* transition: height 0.3s; */
         background-color: #2b2c38;
         margin: 0px;
     }
 
     ul.show
     {
-        display: block;
+        /*display: block;*/
+        height: auto;
         margin-bottom:10px;
     }
 
     li
     {
         padding:0 0 0 35px;
-        display: none;
+        /*display: none;*/
     }
 
     ul.show li
@@ -626,6 +637,7 @@ label
     .information
     {
         margin-right: 0;
+        padding-top: 80px;
     }
 
     .headshot-container

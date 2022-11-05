@@ -4,6 +4,7 @@ const skills = document.getElementsByClassName('skills');
 const experiences = document.getElementsByClassName('experience-container');
 
 const autoScrollDelay = 1000;
+const startScrollDelay = 1000;
 const scrollRate = 0.1;
 var lastUpdate = Date.now();
 
@@ -14,11 +15,26 @@ function toggleButton()
 
 hamburgerButton.addEventListener('click', toggleButton);
 
-navList.childNodes.forEach((child, key, parent) => {
-    child.addEventListener('click', () => {
-        navList.classList.remove('show');
-    });
+/*navList.childNodes.forEach((child, key, parent) => {
+    child.addEventListener('click', scrollTo);
+});*/
+
+//document.getElementById("logo").addEventListener('click', scrollTo);
+
+document.querySelectorAll("a[href^=\"#\"]").forEach((child, key, parent) => {
+    child.addEventListener('click', scrollTo);
 });
+
+function scrollTo()
+{
+    for (let index = 0; index < skills.length; index++) 
+    {
+        const element = skills[index];
+        element.setAttribute("noscroll", "true");
+        setTimeout(() => element.removeAttribute("noscroll"), startScrollDelay);
+    }
+    navList.classList.remove('show');
+}
 
 document.getElementById("form-submit").onclick = function() {
     document.getElementById("message-form").submit();
@@ -71,7 +87,7 @@ var scrollInterval = setInterval(() => {
         else 
         {
             element.parentElement.classList.add("skills-shadow");
-            if ( element.getAttribute("wait") === null )
+            if ( element.getAttribute("wait") === null && element.getAttribute("noscroll") === null )
             {
                 if ( element.scrollLeft == 0 || element.scrollLeft == getScrollLeftMax(element) )
                     element.setAttribute("time", Number(element.getAttribute("time")) + dt );
