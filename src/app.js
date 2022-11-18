@@ -11,6 +11,9 @@ var lastUpdate = Date.now();
 function toggleButton()
 {
     navList.classList.toggle('show');
+
+    if ( navList.classList.contains("show") ) navList.style.setProperty("height",  navList.scrollHeight+"px" );
+    else navList.style.removeProperty("height");
 }
 
 hamburgerButton.addEventListener('click', toggleButton);
@@ -45,7 +48,12 @@ for (let index = 0; index < experiences.length; index++)
     const elem = experiences[index];
 
     elem.getElementsByClassName('dropdown-button')[0].onclick = function() {
-        elem.getElementsByClassName('experiences')[0].classList.toggle('show');
+        const dropdown = elem.getElementsByClassName('experiences')[0];
+        dropdown.classList.toggle('show');
+
+        if ( dropdown.classList.contains("show") ) dropdown.style.setProperty("height",  dropdown.scrollHeight+"px" );
+        else dropdown.style.removeProperty("height");
+
         this.classList.toggle('dropped');
     }
 }    
@@ -66,7 +74,7 @@ for (let index = 0; index < skills.length; index++)
     console.info(element);
 }
 
-//var skTitle = document.getElementById('skills-title');
+var skTitle = document.getElementById('skills-title');
 
 var scrollInterval = setInterval(() => {
     var now = Date.now();

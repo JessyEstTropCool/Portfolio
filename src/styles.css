@@ -60,28 +60,32 @@ nav
 
 ul
 {
+    padding:0;
+    list-style: none;
+}
+
+.nav-list
+{
     display:flex;
     font-size:30px;
     margin:10px;
-    padding:0;
-    list-style: none;
     transition: height linear 0.3s;
 }
 
-li
+.nav-list li
 {
     align-items: center;
     text-decoration: none;
     color:white;
 }
 
-li:hover
+.nav-list li:hover
 {
     background-color: white;
     color:#2b2c38;
 }
 
-li a
+.nav-list li a
 {
     display:inline-block;
     height:100%;
@@ -396,18 +400,24 @@ p
     object-fit: contain;
 }
 
-.experience-container
+.timeline-container
 {
     width: 100%;
     box-shadow: 0 5px 20px var(--heavy-shadow);
-    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.experience-container
+{
+    width: 100%;
 }
 
 .dropdown-button
 {
     display:flex;
     justify-content: space-between;
-    border: 0;
+    border: 1px solid var(--accent-secondary);
     background-color: var(--accent);
     color: white;
     font-size: 20px;
@@ -419,24 +429,52 @@ p
 .dropdown-button.dropped::after { content: "▲"; }
 
 .dropdown-button:hover { background-color: var(--accent-secondary); }
-.dropdown-button:active { background-color: var(--btn-active-back); color: var(--btn-active-front); }
+.dropdown-button:active { background-color: var(--btn-active-back); color: var(--btn-active-front); border: 0; }
 .dropdown-button:focus { outline: 0; }
 
 .experiences
 {
     /*display: none;*/
     height: 0;
-    transition: height linear 0.3s;
+    transition: height ease 0.5s, padding ease 0.5s;
     padding: 0;
-    opacity: 0;
+    overflow: hidden;
 }
 
 .experiences.show
 {
     /*display: block;*/
-    height:auto;
     padding: 20px 0;
-    opacity: 1;
+}
+
+.exp-card
+{
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.exp-card::before
+{
+    content: "";
+    background-color: var(--accent);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.exp-desc
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-logo
+{
+    height:50px;
+    margin:20px;
+    margin: 10px 10px 0 10px;
+    border-radius: 50%;
 }
 
 .project-card
@@ -444,6 +482,7 @@ p
     width: 280px;
     height: 480px;
     box-shadow: 5px 5px 20px rgb(150, 150, 150);
+    border-radius: 10px;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -567,47 +606,47 @@ label
     .hamburger:hover { background-color: var(--accent-secondary); }
     .hamburger:active { background-color: var(--btn-active-back); color: var(--btn-active-front); }
 
-    ul
+    .nav-list
     {
         list-style: none;
         display: block;
         overflow: hidden;
         height: 0;
-        /* transition: height 0.3s; */
+        transition: height 0.3s;
         background-color: #2b2c38;
         margin: 0px;
     }
 
-    ul.show
+    .nav-list.show
     {
         /*display: block;*/
-        height: auto;
+        /* height: auto; */
         margin-bottom:10px;
     }
 
-    li
+    .nav-list li
     {
         padding:0 0 0 35px;
         /*display: none;*/
     }
 
-    ul.show li
+    .nav-list.show li
     {
         display: block;
     }
 
-    li:hover
+    .nav-list li:hover
     {
         list-style-type: "▷";
     }
 
-    li a 
+    .nav-list li a 
     {
         display: list-item;
         padding-left: 10px;
     }
 
-    li a:hover::marker
+    .nav-list li a:hover::marker
     {
         animation: spin 0.2s ease-out forwards;
         -moz-animation: 0.2s ease-out 0s 1 forwards running spin;
