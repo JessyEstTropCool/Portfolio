@@ -46,9 +46,10 @@ document.getElementById("form-submit").onclick = function() {
 for (let index = 0; index < experiences.length; index++)
 {
     const elem = experiences[index];
+    const dropdown = elem.getElementsByClassName('experiences')[0];
 
     elem.getElementsByClassName('dropdown-button')[0].onclick = function() {
-        const dropdown = elem.getElementsByClassName('experiences')[0];
+        //const dropdown = elem.getElementsByClassName('experiences')[0];
         dropdown.classList.toggle('show');
 
         if ( dropdown.classList.contains("show") ) dropdown.style.setProperty("height",  dropdown.scrollHeight+"px" );
@@ -56,6 +57,8 @@ for (let index = 0; index < experiences.length; index++)
 
         this.classList.toggle('dropped');
     }
+
+    //elem.getElementsByClassName('dropdown-button')[0]
 }    
 
 for (let index = 0; index < skills.length; index++) 
