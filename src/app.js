@@ -52,8 +52,34 @@ for (let index = 0; index < experiences.length; index++)
         //const dropdown = elem.getElementsByClassName('experiences')[0];
         dropdown.classList.toggle('show');
 
-        if ( dropdown.classList.contains("show") ) dropdown.style.setProperty("height",  dropdown.scrollHeight+"px" );
-        else dropdown.style.removeProperty("height");
+        if ( dropdown.classList.contains("show") ) 
+        {
+            dropdown.style.setProperty("height",  dropdown.scrollHeight+"px" );
+
+            let timeout = setTimeout(() => {
+                dropdown.style.removeProperty("height");
+                dropdown.removeAttribute("data-timeout");
+            }, 500);
+
+            dropdown.setAttribute("data-timeout", timeout);
+        }
+        else 
+        {
+            let timeout = dropdown.getAttribute("data-timeout");
+
+            if ( timeout === null )
+            {
+                dropdown.style.setProperty("height",  dropdown.scrollHeight+"px" );
+                setTimeout(() => {
+                    dropdown.style.setProperty("height",  0 );
+                }, 1);
+            }
+            else
+            {
+                clearTimeout(timeout);
+                dropdown.style.setProperty("height",  0 );
+            }
+        }
 
         this.classList.toggle('dropped');
     }

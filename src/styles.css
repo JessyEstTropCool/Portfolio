@@ -429,14 +429,13 @@ p
 .dropdown-button.dropped::after { content: "▲"; }
 
 .dropdown-button:hover { background-color: var(--accent-secondary); }
-.dropdown-button:active { background-color: var(--btn-active-back); color: var(--btn-active-front); border: 0; }
+.dropdown-button:active { background-color: var(--btn-active-back); color: var(--btn-active-front); border-color: var(--btn-active-front); }
 .dropdown-button:focus { outline: 0; }
 
 .experiences
 {
     /*display: none;*/
-    height: 0;
-    transition: height ease 0.5s, padding ease 0.5s;
+    transition: height ease 0.5s;
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -455,10 +454,10 @@ p
     bottom: 0;
 }
 
-.experiences.show
+.experiences ul
 {
-    /*display: block;*/
-    padding: 20px 0;
+    padding: 0;
+    margin:0;
 }
 
 .exp-card
@@ -477,8 +476,11 @@ p
     border-radius: 50%;
     height: calc(80px - 2em);
     width: calc(80px - 2em);
+    min-width: calc(80px - 2em);
     margin: 10px;
 }
+
+.exp-card:hover::before { background-color: var(--accent); border-color: var(--accent-secondary); }
 
 .exp-title
 {
@@ -737,6 +739,18 @@ label
     .hero-text
     {
         margin-left: 20px;
+    }
+
+    .exp-card::before
+    {
+        content: none;
+    }
+
+    .exp-logo
+    {
+        margin-left: 0;
+        border: 0.5em solid var(--accent);
+        height: calc(100px - 1em);
     }
 }
 
