@@ -11,8 +11,8 @@
     --accent-transparent:#ef744b80;
     --accent-secondary:#ef744b;
 
-    --btn-active-back:#808080;
-    --btn-active-front:#A9A9A9;
+    --btn-active-back:#A9A9A9;
+    --btn-active-front:#808080;
 
     --shadow:#BBBBBB80;
     --heavy-shadow:rgb(150, 150, 150);
@@ -54,7 +54,7 @@ nav
     right: 0;
     display:flex;
     justify-content: space-between;
-    background-color: #2b2c38;
+    background-color: var(--nav-back);
     z-index: 99;
 }
 
@@ -76,13 +76,13 @@ ul
 {
     align-items: center;
     text-decoration: none;
-    color:white;
+    color:var(--hero-front);
 }
 
 .nav-list li:hover
 {
-    background-color: white;
-    color:#2b2c38;
+    background-color: var(--hero-front);
+    color:var(--nav-back);
 }
 
 .nav-list li a
@@ -145,8 +145,8 @@ p
     width: fit-content;
     height: fit-content;
     border-radius: 30px;
-    background-color: coral;
-    color: white;
+    background-color: var(--accent);
+    color: var(--hero-front);
     text-align: center;
     font-size:30px;
     font-weight:300;
@@ -165,13 +165,13 @@ p
 
 .button:hover, .sm-button:hover
 {
-    background-color: #ef744b;
+    background-color: var(--accent-secondary);
 }
 
 .button:active, .sm-button:active
 {
-    background-color: #A9A9A9;
-    color:#808080;
+    background-color: var(--btn-active-back);
+    color:var(--btn-active-front);
 }
 
 .logo
@@ -184,7 +184,8 @@ p
 
 .social
 {
-    margin:20px;
+    margin: 10px;
+    display: block;
 }
 
 .sub-section
@@ -520,7 +521,7 @@ p
 {
     width: 280px;
     height: 480px;
-    box-shadow: 5px 5px 20px rgb(150, 150, 150);
+    box-shadow: 5px 5px 20px var(--heavy-shadow);
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -547,7 +548,7 @@ p
 {
     margin-top: 10px;
     width: 250px;
-    box-shadow: 0px 0px 10px 0px rgb(150 150 150);
+    box-shadow: 0px 0px 10px 0px var(--heavy-shadow);
     border-radius: 125px;
     align-self: center;
 }
@@ -574,7 +575,7 @@ hr
 .project-link
 {
     text-decoration:none;
-    color: #ef744b;
+    color: var(--accent-secondary);
 }
 
 .hamburger
@@ -634,7 +635,7 @@ label
         display:block;
         border: 0;
         background-color: var(--accent);
-        color: white;
+        color: var(--hero-front);
         font-size: 30px;
         padding:20px 30px;
         min-width: 50px;
@@ -652,7 +653,7 @@ label
         overflow: hidden;
         height: 0;
         transition: height 0.3s;
-        background-color: #2b2c38;
+        background-color: var(--nav-back);
         margin: 0px;
     }
 
