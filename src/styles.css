@@ -588,6 +588,21 @@ hr
     outline: 0;
 }
 
+.footer-links
+{
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+.footer-socials
+{
+    display: flex; 
+    justify-content: center;
+}
+
+.mb-0 { margin-bottom: 0; }
+
 form
 {
     margin-top: 30px;

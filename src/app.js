@@ -7,6 +7,7 @@ const autoScrollDelay = 1000;
 const startScrollDelay = 1000;
 const scrollRate = 0.1;
 var lastUpdate = Date.now();
+var timeouts = [];
 
 function toggleButton()
 {
@@ -30,11 +31,17 @@ document.querySelectorAll("a[href^=\"#\"]").forEach((child, key, parent) => {
 
 function scrollTo()
 {
+    timeouts.forEach(to => {
+        clearTimeout(to);
+    });
+
+    timeouts = [];
+
     for (let index = 0; index < skills.length; index++) 
     {
         const element = skills[index];
         element.setAttribute("noscroll", "true");
-        setTimeout(() => element.removeAttribute("noscroll"), startScrollDelay);
+        timeouts.push(setTimeout(() => element.removeAttribute("noscroll"), startScrollDelay));
     }
     navList.classList.remove('show');
 }
@@ -126,8 +133,10 @@ var scrollInterval = setInterval(() => {
             element.parentElement.classList.add("skills-shadow");
             if ( element.getAttribute("wait") === null && element.getAttribute("noscroll") === null )
             {
-                if ( element.scrollLeft == 0 || element.scrollLeft == getScrollLeftMax(element) )
+                if ( element.scrollLeft == 0 || element.scrollLeft >= getScrollLeftMax(element) )
+                {
                     element.setAttribute("time", Number(element.getAttribute("time")) + dt );
+                }
     
                 if ( element.getAttribute("way") === null || ( element.scrollLeft <= 0 && element.getAttribute("time") >= autoScrollDelay ) ) 
                 {
@@ -141,7 +150,7 @@ var scrollInterval = setInterval(() => {
                 }
                 
                 if ( element.getAttribute("way") === "right" ) element.scrollLeft += 1;
-                else element.scrollLeft -= 1;
+                else if ( element.getAttribute("way") === "left" ) element.scrollLeft -= 1;
             }
         }
     }
@@ -150,6 +159,6 @@ var scrollInterval = setInterval(() => {
 
 function getScrollLeftMax(elem) 
 {
-    if (elem.scrollLeftMax === undefined) return elem.scrollWidth - elem.clientWidth;
-    else return elem.scrollLeftMax;
+    if (elem.scrollLeftMax === undefined) return elem.scrollWidth - elem.clientWidth - 1;
+    else return elem.scrollLeftMax - 1;
 }
