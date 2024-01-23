@@ -43,12 +43,13 @@ function scrollTo()
         element.setAttribute("noscroll", "true");
         timeouts.push(setTimeout(() => element.removeAttribute("noscroll"), startScrollDelay));
     }
-    navList.classList.remove('show');
+
+    if ( navList.classList.contains("show") ) toggleButton();
 }
 
-document.getElementById("form-submit").onclick = function() {
+/*document.getElementById("form-submit").onclick = function() {
     document.getElementById("message-form").submit();
-}
+}*/
 
 for (let index = 0; index < experiences.length; index++)
 {

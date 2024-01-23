@@ -14,7 +14,7 @@
     <body>
         <section class="hero">
             <nav>
-                <a id="logo" href="#"><img class="logo" src="src/images/CoolIcon.png" alt="Jessy Adam's logo"></a>
+                <a id="logo" href="#"><img class="logo" src="src/images/CoolPierre.png" alt="Jessy Adam's logo"></a>
                 <ul id="nav-list" class="nav-list">
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -30,14 +30,9 @@
                 <div class="hero-text">
                     <h1>Jessy Adam</h1>
                     <p>Full Stack Developper</p>
-                    <div class="button"><a href="#about-me">About me</a></div>
+                    <a href="#about-me" class="button">About me</a>
                 </div>
                 <div class="socials">
-                    <!--<div>
-                        <a href="https://www.twitter.com/BoredDrawer" class="social">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                        </a>
-                    </div>-->
                     <div>
                         <a href="https://www.linkedin.com/in/jessy-adam/" class="social">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
@@ -80,7 +75,7 @@
                             <span>projects done</span>
                         </span> 
                     </div>
-                    <a href="#story" class="sm-button sm-only">My story ▼</a>
+                    <a href="#story" class="button sm-button sm-only">My story ▼</a>
                 </div>
             </div>
         </section>
@@ -161,9 +156,15 @@
                         <div class="skills">
                             <div class="skill">
                                 <div>
-                                    <img src="src/images/lang/.NET.svg" alt=".NET">
+                                    <img src="src/images/lang/NET.svg" alt=".NET">
                                 </div>
                                 Experienced
+                            </div>
+                            <div class="skill">
+                                <div>
+                                    <img src="src/images/lang/AspNet.png" alt="Asp.NET">
+                                </div>
+                                Intermediate
                             </div>
                             <div class="skill">
                                 <div>
@@ -173,7 +174,7 @@
                             </div>
                             <div class="skill">
                                 <div>
-                                    <img src="src/images/lang/Spring.svg" alt="Spring">
+                                    <img src="src/images/lang/SpringBoot.png" alt="Springboot">
                                 </div>
                                 Beginner
                             </div>
@@ -206,6 +207,12 @@
                             <div class="skill">
                                 <div>
                                     <img src="src/images/lang/MySQL.svg" alt="SQLite">
+                                </div>
+                                Intermediate
+                            </div>
+                            <div class="skill">
+                                <div>
+                                    <img src="src/images/lang/SQLite.svg" alt="SQLite">
                                 </div>
                                 Intermediate
                             </div>
@@ -412,23 +419,73 @@
                         </p>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div>
+                        <img class="project-image" src="src/images/proj/PierrePlay.png" alt="PierrePlay image">
+                        <h3>PierrePlay</h3>
+                        <p class="subtext project-desc">Restful API using SpringBoot inspired by Google Play</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://github.com/JessyEstTropCool/PierrePlay">View on GitHub</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <img class="project-image" src="src/images/proj/due.png" alt="Word Generator image">
+                        <h3>DUE Generator</h3>
+                        <p class="subtext project-desc">A Word document generating web application made with ASP.NET and Entity Framework Core</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <img class="project-image" src="src/images/proj/Hikify.png" alt="Hikify image">
+                        <h3>Hikify</h3>
+                        <p class="subtext project-desc">Hike tracking application for Android phones</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <img class="project-image" src="src/images/proj/HelbFour.png" alt="HELBFour image">
+                        <h3>HELBFour</h3>
+                        <p class="subtext project-desc">Data analysis project of a hypothetical store done with Python</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="subtext">
+                            <a class="project-link" href="https://github.com/JessyEstTropCool/HelbFour">View on GitHub</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <img class="project-image" src="src/images/proj/bnd.png" alt="BND image">
+                        <h3>Sourcing Application</h3>
+                        <p class="subtext project-desc">Consultant sourcing web application made with Python and Django</p>
+                    </div>
+                </div>
             </div>
         </section>
         <footer id="contact-me">
             <h2>Contact me</h2>
-            <div class="footer-links">
-                <div class="socials"><p><b>Mail</b></p></div>
-                <div class="socials"><p>jadam.jessyadam@gmail.com</p></div>
-            </div>
-            <form id="message-form" method="get" action="#">
-                <label for="name">Name</label>
-                <input type="text" name="name" placeholder="The form doesn't work right now" id="contact_name">
-                <label for="email">Email address</label>
-                <input type="text" name="email" placeholder="sorry" id="contact_email">
-                <label for="message">Message</label>
-                <textarea name="message" placeholder="I'll try to fix it soon" id="contact_message"></textarea>
-                <div class="button"><a href="#" id="form-submit">Submit</a></div>
-            </form>
+            <!--<div class="contact">
+                <div class="footer-links">
+                    <div class="socials"><p><b>Mail</b></p></div>
+                    <div class="socials"><p>jadam.jessyadam@gmail.com</p></div>
+                </div>
+                <div class="line"></div>
+                <form id="message-form" method="get" action="#">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="The form doesn't work right now" id="contact_name" disabled>
+                    <label for="email">Email address</label>
+                    <input type="text" name="email" placeholder="sorry" id="contact_email" disabled>
+                    <label for="message">Message</label>
+                    <textarea name="message" placeholder="I'll try to fix it soon" id="contact_message" disabled></textarea>
+                    <a href="#" id="form-submit" class="button" style="pointer-events: none; cursor: default;">Submit</a>
+                </form>
+            </div>-->
             <div class="footer-links">
                 <h2 class="mb-0">Jessy Adam</h2>
                 <div class="footer-socials">
@@ -443,6 +500,10 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="footer-links">
+                <span>Mail</span>
+                <span>jadam.jessyadam@gmail.com</span>
             </div>
         </footer>
 
